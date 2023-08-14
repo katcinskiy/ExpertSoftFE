@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book shop</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/2bc0065121.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="filter-buttons">
+                <button class="filter-button" onclick="buttonAll()">All</button>
+                <button class="filter-button" onclick="buttonLiked()">Favorites</button>
+                <button class="filter-button" onclick="buttonCompare()">Comparison</button>
+            </div>
+            <label class="filter-checkbox">
+                <input type="checkbox" id="hiddenCheckbox" onclick="clickedShowHidden()">
+                <span class="checkbox-label">Show Hidden</span>
+            </label>
+        </div>
+        <main class="content">
+            <div class="container">
+                <ul id="catalog-list" class="catalog_list">
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+
+<template id="product-template">
+    <li id="" class="catalog__item item root">
+        <div class="item__product product">
+            <figure class="product__photo">
+                <img
+                        id="photo"
+                    src=""
+                        alt="Product photo"
+                />
+            </figure>
+            <div class="badges_container">
+                <button
+                        id="badge-hidden"
+                        type="button"
+                        name="view-badge"
+                        value=""
+                        onclick="clickedBadgeHidden(this.value)"
+                        class="product__view-badge view-badge"
+                >
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+                <button
+                        id="badge-like"
+                        type="button"
+                        name="view-badge"
+                        value=""
+                        onclick="clickedBadgeLike(this.value)"
+                        class="product__view-badge view-badge"
+                >
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <button
+                        id="badge-compare"
+                        type="button"
+                        name="view-badge"
+                        value=""
+                        onclick="clickedBadgeCompare(this.value)"
+                        class="product__view-badge view-badge"
+                >
+                    <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                </button>
+            </div>
+
+            <div class="product__category category">
+                books
+            </div>
+            <div class="star-container">
+                <div class="star full"></div>
+                <div class="star full"></div>
+                <div class="star full"></div>
+                <div class="star half"></div>
+                <div class="star"></div>
+            </div>
+            <div id="name" class="product__name name">
+            </div>
+            <div class="product__prices prices">
+                <div class="prices prices_new">$14</div>
+                <div class="prices prices_old">$24</div>
+            </div>
+        </div>
+        <button
+                class="item__add-btn add-btn"
+                type="button"
+                name="add-btn">
+            <i class="fa-solid fa-cart-shopping"></i> add to cart
+        </button>
+    </li>
+</template>
+
+<script src="./main.js"></script>
+</html>

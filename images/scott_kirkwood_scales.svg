@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="svg2613"
+    sodipodi:docname="scales.svg"
+    viewBox="0 0 297.25 230.88"
+    sodipodi:version="0.32"
+    version="1.0"
+    inkscape:output_extension="org.inkscape.output.svg.inkscape"
+    inkscape:version="0.46"
+  >
+  <defs
+      id="defs2616"
+    >
+    <clipPath
+        id="clipPath3453"
+        clipPathUnits="userSpaceOnUse"
+      >
+      <rect
+          id="rect3455"
+          style="stroke-linejoin:round;stroke:#ff0000;stroke-linecap:round;stroke-width:8.6;fill:none"
+          height="58.074"
+          width="103.7"
+          y="43.593"
+          x="-129.19"
+      />
+    </clipPath
+    >
+  </defs
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      guidetolerance="10.0"
+      pagecolor="#ffffff"
+      gridtolerance="10.0"
+      inkscape:zoom="1.6875"
+      objecttolerance="10.0"
+      borderopacity="1.0"
+      inkscape:current-layer="svg2613"
+      inkscape:cx="102.13333"
+      inkscape:cy="49.401134"
+      inkscape:object-nodes="true"
+      inkscape:window-y="25"
+      inkscape:window-x="0"
+      inkscape:window-height="949"
+      showgrid="false"
+      inkscape:pageopacity="0.0"
+      inkscape:window-width="1280"
+  />
+  <g
+      id="layer2"
+      inkscape:label="drawing#1"
+      inkscape:groupmode="layer"
+      transform="translate(-11.439 -7.3467)"
+    >
+    <path
+        id="path2626"
+        style="stroke:#1a1a1a;stroke-linecap:round;stroke-width:10;fill:none"
+        d="m56.889 77.37c-0.198 0-0.395 0 0 0z"
+    />
+    <path
+        id="path2628"
+        style="stroke:#1a1a1a;stroke-linecap:round;stroke-width:10;fill:none"
+        d="m144.59 53.074l-87.109 23.111"
+    />
+    <path
+        id="path3400"
+        sodipodi:rx="14.222222"
+        sodipodi:ry="14.222222"
+        style="stroke:#1a1a1a;stroke-linecap:round;stroke-width:10;fill:none"
+        sodipodi:type="arc"
+        d="m173.04 51.296a14.222 14.222 0 1 1 -28.45 0 14.222 14.222 0 1 1 28.45 0z"
+        transform="translate(1.1852 -4.7407)"
+        sodipodi:cy="51.296295"
+        sodipodi:cx="158.81482"
+    />
+    <path
+        id="path3402"
+        style="stroke:#1a1a1a;stroke-linecap:round;stroke-width:10;fill:none"
+        d="m263.11 20.481l-87.11 23.112"
+    />
+    <path
+        id="path3406"
+        style="fill-rule:evenodd;stroke:#1a1a1a;stroke-width:10;fill:#ff0000"
+        d="m156.7 34.236l-7.62-21.583"
+    />
+    <path
+        id="path3410"
+        sodipodi:nodetypes="cc"
+        style="fill-rule:evenodd;fill-opacity:.75;stroke:#1a1a1a;stroke-width:10"
+        d="m160.59 59l-0.59 174.22"
+    />
+    <path
+        id="path3412"
+        sodipodi:nodetypes="cc"
+        style="fill-rule:evenodd;fill-opacity:.75;stroke:#1a1a1a;stroke-width:10.183"
+        d="m30.017 230.65l261.15 0.41"
+    />
+  </g
+  >
+  <path
+      id="path3434"
+      style="stroke-linejoin:round;stroke:#1a1a1a;stroke-linecap:round;stroke-width:8.6;fill:none"
+      d="m13.45 150.02l32.593-81.182 33.778 83.552"
+  />
+  <path
+      id="path3438"
+      style="stroke-linejoin:round;stroke:#1a1a1a;stroke-linecap:round;stroke-width:8.6;fill:none"
+      d="m219.08 94.32l32.59-81.185 33.78 83.555"
+  />
+  <path
+      id="path3440"
+      style="stroke-linejoin:round;stroke:#1a1a1a;stroke-linecap:round;stroke-width:8.6;fill:#1a1a1a"
+      d="m-33.979 48.926c0 20.752-18.73 37.595-41.808 37.595s-41.803-16.843-41.803-37.595 18.725-37.595 41.803-37.595 41.808 16.843 41.808 37.595zm0-4h-83.611"
+      clip-path="url(#clipPath3453)"
+      sodipodi:nodetypes="csssccc"
+      transform="translate(121.89 97.542)"
+  />
+  <path
+      id="path3457"
+      style="stroke-linejoin:round;stroke:#1a1a1a;stroke-linecap:round;stroke-width:8.6;fill:#1a1a1a"
+      d="m-33.979 48.926c0 20.752-18.73 37.595-41.808 37.595s-41.803-16.843-41.803-37.595 18.725-37.595 41.803-37.595 41.808 16.843 41.808 37.595zm0-4h-83.611"
+      clip-path="url(#clipPath3453)"
+      sodipodi:nodetypes="csssccc"
+      transform="translate(326.93 45.394)"
+  />
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >scales</dc:title
+        >
+        <dc:date
+          >2009-04-05T13:17:50</dc:date
+        >
+        <dc:description
+          >Scales like you'd use to weigh something.  Left side is down further than the right.</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/24101/scales-by-scott_kirkwood</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >scott_kirkwood</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >balance</rdf:li
+            >
+            <rdf:li
+              >scale</rdf:li
+            >
+            <rdf:li
+              >silhouette</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>
