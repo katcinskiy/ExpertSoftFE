@@ -62,6 +62,11 @@ products = [
 
 ]
 
+const Inclusions = { All: 'all', FAVORITES: 'favorites', COMPARISON: 'comparison' };
+
+allInclusions = Object.keys(Inclusions).map(key => Inclusions[key]).map(value => "inclusion-" + value)
+
+
 const productTemplate = document.getElementById("product-template");
 const productListDiv = document.getElementById("catalog-list");
 
@@ -69,17 +74,39 @@ showHidden = getShowHidden()
 if (showHidden) {
     document.getElementById('hiddenCheckbox').checked = true;
 }
+
 hiddenProducts = getHiddenProducts()
 likedProducts = getLikedProducts()
 comparedProducts = getComparedProducts()
 
 currentIncludeOnly = undefined
+currentIncludeOnlyCategory = getCurrentIncludeOnlyCategory()
+
+switch (currentIncludeOnlyCategory) {
+    case Inclusions.All: {
+        currentIncludeOnly = undefined;
+        break;
+    }
+    case Inclusions.FAVORITES: {
+        currentIncludeOnly = likedProducts;
+        break;
+    }
+    case Inclusions.COMPARISON: {
+        currentIncludeOnly = comparedProducts;
+        break;
+    }
+    default: {
+        throw Error();
+    }
+}
+
 
 showProducts(currentIncludeOnly, showHidden)
 
+
 function getShowHidden() {
     let fromStorage = localStorage.getItem("showHidden")
-    if (fromStorage == null) {
+    if (fromStorage === null) {
         return false;
     }
     return fromStorage === 'true';
@@ -87,7 +114,7 @@ function getShowHidden() {
 
 function getHiddenProducts() {
     let fromStorage = localStorage.getItem("hiddenProducts")
-    if (fromStorage == null) {
+    if (fromStorage === null) {
         return new Set();
     }
     return new Set(fromStorage.split(','));
@@ -95,7 +122,7 @@ function getHiddenProducts() {
 
 function getLikedProducts() {
     let fromStorage = localStorage.getItem("likedProducts")
-    if (fromStorage == null) {
+    if (fromStorage === null) {
         return new Set();
     }
     return new Set(fromStorage.split(','));
@@ -103,13 +130,33 @@ function getLikedProducts() {
 
 function getComparedProducts() {
     let fromStorage = localStorage.getItem("comparedProducts")
-    if (fromStorage == null) {
+    if (fromStorage === null) {
         return new Set();
     }
     return new Set(fromStorage.split(','));
 }
 
+function getCurrentIncludeOnlyCategory() {
+    let fromStorage = localStorage.getItem("currentIncludeOnlyCategory")
+    if (fromStorage === null) {
+        return Inclusions.All;
+    }
+    return fromStorage
+}
+
+function setInclusionUIState() {
+    allInclusions.forEach(inclusion => {
+        if (inclusion === "inclusion-" + currentIncludeOnlyCategory) {
+            window.document.getElementById(inclusion).style = "opacity: 0.3";
+        } else {
+            window.document.getElementById(inclusion).style = "opacity: 1.0";
+        }
+    })
+}
+
 function showProducts(includeOnly, showHidden) {
+
+    setInclusionUIState()
     products.forEach(product => {
         let id = "product-" + product.id
         let isHidden = hiddenProducts.has(id)
@@ -128,6 +175,8 @@ function showProducts(includeOnly, showHidden) {
 
             productClone.querySelector(".root").id = id
 
+            setBadgesState(id, productClone)
+
             if (isHidden) {
                 toAddOpacity.push(id)
             }
@@ -138,6 +187,18 @@ function showProducts(includeOnly, showHidden) {
             window.document.getElementById(id).style = "opacity: 0.5";
         })
     })
+}
+
+function setBadgesState(id, product) {
+    if (hiddenProducts.has(id)) {
+        product.querySelector("#badge-hidden").classList.replace("view-badge", "view-badge-active")
+    }
+    if (likedProducts.has(id)) {
+        product.querySelector("#badge-like").classList.replace("view-badge", "view-badge-active")
+    }
+    if (comparedProducts.has(id)) {
+        product.querySelector("#badge-compare").classList.replace("view-badge", "view-badge-active")
+    }
 }
 
 function clearProducts() {
@@ -166,7 +227,6 @@ function clickedBadgeLike(val) {
     } else {
         likedProducts.add(val)
     }
-    likedProducts.push(val)
     localStorage.setItem('likedProducts', Array.from(likedProducts))
 
     clearProducts()
@@ -179,8 +239,10 @@ function clickedBadgeCompare(val) {
     } else {
         comparedProducts.add(val)
     }
-    comparedProducts.push(val)
     localStorage.setItem('comparedProducts', Array.from(comparedProducts))
+
+    clearProducts()
+    showProducts(currentIncludeOnly, showHidden)
 }
 
 function clickedShowHidden() {
@@ -192,19 +254,25 @@ function clickedShowHidden() {
 }
 
 function buttonAll() {
+    currentIncludeOnlyCategory = Inclusions.All
+    localStorage.setItem('currentIncludeOnlyCategory', currentIncludeOnlyCategory)
     clearProducts()
     currentIncludeOnly = undefined
-    showProducts(undefined, true)
+    showProducts(undefined, showHidden)
 }
 
 function buttonLiked() {
+    currentIncludeOnlyCategory = Inclusions.FAVORITES
+    localStorage.setItem('currentIncludeOnlyCategory', currentIncludeOnlyCategory)
     clearProducts()
     currentIncludeOnly = likedProducts
-    showProducts(currentIncludeOnly, true)
+    showProducts(currentIncludeOnly, showHidden)
 }
 
 function buttonCompare() {
+    currentIncludeOnlyCategory = Inclusions.COMPARISON
+    localStorage.setItem('currentIncludeOnlyCategory', currentIncludeOnlyCategory)
     clearProducts()
     currentIncludeOnly = comparedProducts
-    showProducts(currentIncludeOnly, true)
+    showProducts(currentIncludeOnly, showHidden)
 }

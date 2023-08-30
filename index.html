@@ -11,9 +11,9 @@
     <div class="wrapper">
         <div class="header">
             <div class="filter-buttons">
-                <button class="filter-button" onclick="buttonAll()">All</button>
-                <button class="filter-button" onclick="buttonLiked()">Favorites</button>
-                <button class="filter-button" onclick="buttonCompare()">Comparison</button>
+                <button id="inclusion-all" class="filter-button" onclick="buttonAll()">All</button>
+                <button id="inclusion-favorites" class="filter-button" onclick="buttonLiked()">Favorites</button>
+                <button id="inclusion-comparison" class="filter-button" onclick="buttonCompare()">Comparison</button>
             </div>
             <label class="filter-checkbox">
                 <input type="checkbox" id="hiddenCheckbox" onclick="clickedShowHidden()">
@@ -31,7 +31,10 @@
 
 <template id="product-template">
     <li id="" class="catalog__item item root">
-        <div class="item__product product">
+        <div class="item__product product" style="justify-content: space-between">
+            <div class="product__subtitle subtitle">
+                New
+            </div>
             <figure class="product__photo">
                 <img
                         id="photo"
@@ -73,22 +76,25 @@
                 </button>
             </div>
 
-            <div class="product__category category">
-                books
+            <div style="padding-bottom: 6px">
+                <div class="product__category category">
+                    books
+                </div>
+                <div class="star-container">
+                    <div class="star full"></div>
+                    <div class="star full"></div>
+                    <div class="star full"></div>
+                    <div class="star half"></div>
+                    <div class="star"></div>
+                </div>
+                <div id="name" class="product__name name">
+                </div>
+                <div class="product__prices prices">
+                    <div class="prices prices_new">$14</div>
+                    <div class="prices prices_old">$24</div>
+                </div>
             </div>
-            <div class="star-container">
-                <div class="star full"></div>
-                <div class="star full"></div>
-                <div class="star full"></div>
-                <div class="star half"></div>
-                <div class="star"></div>
-            </div>
-            <div id="name" class="product__name name">
-            </div>
-            <div class="product__prices prices">
-                <div class="prices prices_new">$14</div>
-                <div class="prices prices_old">$24</div>
-            </div>
+
         </div>
         <button
                 class="item__add-btn add-btn"
